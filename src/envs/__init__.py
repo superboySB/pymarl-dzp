@@ -27,4 +27,4 @@ if gfootball:
     REGISTRY["gfootball"] = partial(env_fn, env=GoogleFootballEnv)
 
 if sys.platform == "linux":
-    os.environ.setdefault("SC2PATH", "~/StarCraftII")
+    os.environ.setdefault("SC2PATH", "/home/ps/pymarl/3rdparty/StarCraftII")
