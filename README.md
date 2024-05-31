@@ -14,7 +14,7 @@ CUDA_VISIBLE_DEVICES=0 python3 src/main.py --config=rode --env-config=sc2 with e
 ```
 中途停止训练`stop.sh`。
 
-可以看到训练正常进行之后会生成相应的replay文件在`/home/ps/pymarl/3rdparty/StarCraftII/Replays`目录，然后换成windows页面运行：
+可以看到训练正常进行之后会有相应的ckpt文件，然后分别设置一下`checkpoint_path=$MODEL_DIR`、`runner='episide'`、`evaluate=True`以及`save_replay=True`。之后生成相应的replay文件在`/home/ps/pymarl/3rdparty/StarCraftII/Replays`目录，然后换成windows页面运行：
 ```sh
 python -m pysc2.bin.play --norender --rgb_minimap_size 0 --replay NAME.SC2Replay
 ```

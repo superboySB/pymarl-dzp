@@ -6,11 +6,16 @@ epsilon_finish: .0
 epsilon_anneal_time: 100000
 mask_before_softmax: True
 
-runner: "episode"
+runner: "parallel" # train -> parallel, test -> episode
+batch_size_run: 8 # batch_size_run=4, buffer_size = 2500, batch_size=64  for 3s5z_vs_3s6z
+
+# runner: "episode"
+# batch_size_run: 1
+# checkpoint_path: /home/ps/pymarl-dzp/results/models/rode__2024-05-31_15-08-45
+
 mac: 'lica_mac'
 
 buffer_size: 128
-batch_size_run: 1
 batch_size: 32
 t_max: 10050000
 
