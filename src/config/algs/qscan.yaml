@@ -9,12 +9,12 @@ mask_before_softmax: True
 
 mac: 'lica_mac'
 
-runner: "parallel" # train -> parallel, test -> episode
-batch_size_run: 8 # batch_size_run=4, buffer_size = 2500, batch_size=64  for 3s5z_vs_3s6z
+# runner: "parallel" # train -> parallel, test -> episode
+# batch_size_run: 8 # batch_size_run=4, buffer_size = 2500, batch_size=64  for 3s5z_vs_3s6z
 
-# runner: "episode"
-# batch_size_run: 1
-# checkpoint_path: /home/ps/pymarl-dzp/results/models/qscan__2024-05-31_15-08-37
+runner: "episode"
+batch_size_run: 1
+checkpoint_path: /home/ps/pymarl-dzp/results/models/qscan__2024-05-31_16-21-47
 
 buffer_size: 128
 batch_size: 32
